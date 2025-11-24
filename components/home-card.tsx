@@ -33,7 +33,7 @@ export function HomeCard({
       </CardHeader>
       <CardContent className="mt-auto flex flex-col">
         <CardTitle>{title}</CardTitle>
-        <div className="flex flex-wrap gap-1 my-2">
+        <div className="flex flex-wrap gap-1 my-2 w-full">
           {badges.map((badge, index) => (
             <Badge key={index} variant="secondary">
               {badge}

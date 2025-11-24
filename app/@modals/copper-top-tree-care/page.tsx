@@ -9,6 +9,7 @@ import { TECH_STACK_NAME, TechBadge } from "@/components/tech-badge";
 import { Button } from "@/components/ui/button";
 import { H3 } from "@/components/ui/typography";
 import Image from "next/image";
+import copperTopTreeCareScreenshot from "@/public/copper_top_tree_care_screenshot.webp";
 
 const TECH_STACK: TECH_STACK_NAME[] = [
   "react",
@@ -29,7 +30,7 @@ export default function CopperTopTreeCarePage() {
         </Button>
 
         <Image
-          src="/copper_top_tree_care_screenshot.webp"
+          src={copperTopTreeCareScreenshot}
           alt="Copper Top Tree Care screenshot"
           width={1550}
           height={912}

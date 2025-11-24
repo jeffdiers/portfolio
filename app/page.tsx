@@ -32,7 +32,7 @@ const cardLinksData: Omit<HomeCardProps, "number">[] = [
     href: "/copper-top-tree-care",
     icon: BackpackIcon,
     title: "Copper Top Tree Care",
-    badges: ["Development"],
+    badges: ["Development", "Website", "Business"],
   },
   {
     href: "/color-zen",

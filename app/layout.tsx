@@ -5,13 +5,23 @@ import { cn } from "@/lib/utils";
 import { Providers } from "@/components/providers";
 import { Footer, Header } from "@/components/nav-menus";
 import Image from "next/image";
-import background from "@/public/background.png";
+import background from "@/public/background.webp";
 
-const sora = Sora({ subsets: ["latin"], variable: "--font-sans" });
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+});
+
 const caprasimo = Caprasimo({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-caprasimo",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -19,14 +29,6 @@ export const metadata: Metadata = {
   description: "Software Engineer",
   icons: {
     icon: "/favicon.ico",
-  },
-  manifest: "/manifest.json",
-  themeColor: "#000000",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
   },
 };
 
