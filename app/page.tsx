@@ -2,6 +2,7 @@ import { HomeCard, HomeCardProps } from "@/components/home-card";
 import { IconGamepadLine } from "@/components/icons";
 import { H1 } from "@/components/ui/typography";
 import {
+  BackpackIcon,
   BlendingModeIcon,
   DashboardIcon,
   FileTextIcon,
@@ -26,6 +27,12 @@ const cardLinksData: Omit<HomeCardProps, "number">[] = [
     icon: IconGamepadLine,
     title: "Drug Wars",
     badges: ["Game", "Development"],
+  },
+  {
+    href: "/copper-top-tree-care",
+    icon: BackpackIcon,
+    title: "Copper Top Tree Care",
+    badges: ["Development"],
   },
   {
     href: "/color-zen",

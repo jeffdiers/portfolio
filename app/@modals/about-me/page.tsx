@@ -47,7 +47,7 @@ export default function AboutMePage() {
           </div>
         </div>
         <P>
-          Currently, I am a Senior Software Engineer at Jona, where I contribute
+          Currently, I am a Senior Software Engineer at Posh, where I contribute
           to a high-paced startup environment, developing and maintaining a
           customer-facing web application powered by AI. My work focuses on
           enhancing user experience and system performance through the
