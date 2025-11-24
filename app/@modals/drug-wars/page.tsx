@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ModalPage,
   ModalPageTitle,
@@ -10,7 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { TECH_STACK_NAME, TechBadge } from "@/components/tech-badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import drugWarsScreenshot from "@/public/drug_wars_screenshot.webp";
 import { IconGithub } from "@/components/icons";
+import Link from "next/link";
 
 const FEATURES = [
   { emoji: "💊", text: "Buy and sell drugs" },
@@ -44,17 +44,17 @@ export default function DrugWarsPage() {
       <ModalPageTitle>Drug Wars</ModalPageTitle>
       <ModalScrollBody>
         <Button asChild variant="outline" className="text-xl">
-          <a href="https://drug-wars.netlify.app/" target="_blank">
+          <Link href="https://drug-wars.netlify.app/" target="_blank">
             🕹️ Play Now
-          </a>
+          </Link>
         </Button>
 
         <Image
-          src="/drug_wars_screenshot.jpg"
+          src={drugWarsScreenshot}
           alt="Drug Wars game screenshot"
-          width={1550}
-          height={912}
           className="rounded-xl mt-8"
+          priority
+          placeholder="blur"
         />
 
         <H3 className="mt-8">About the Game</H3>
@@ -89,9 +89,9 @@ export default function DrugWarsPage() {
         </div>
 
         <Button asChild variant="link" className="mt-4">
-          <a href="https://github.com/jeffdiers/drugwars" target="_blank">
+          <Link href="https://github.com/jeffdiers/drugwars" target="_blank">
             <IconGithub className="w-4 h-4 mr-1" /> View GitHub
-          </a>
+          </Link>
         </Button>
       </ModalScrollBody>
     </ModalPage>

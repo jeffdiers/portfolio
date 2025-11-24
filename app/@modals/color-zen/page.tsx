@@ -1,5 +1,3 @@
-"use client";
-
 import { IconGithub } from "@/components/icons";
 import {
   ModalPage,
@@ -11,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { H3 } from "@/components/ui/typography";
 import { BlendingModeIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import colorZenScreenshot from "@/public/color_zen_screenshot.webp";
+import Link from "next/link";
 
 const TECH_STACK: TECH_STACK_NAME[] = [
   "react",
@@ -26,17 +26,18 @@ export default function ColorZenPage() {
       <ModalPageTitle>Color Zen</ModalPageTitle>
       <ModalScrollBody>
         <Button asChild variant="outline" className="text-xl">
-          <a href="https://color-zen-cyan.vercel.app/" target="_blank">
-            <BlendingModeIcon className="h-6 w-6 mr-2" /> View Color Zen
-          </a>
+          <Link href="https://color-zen-cyan.vercel.app/" target="_blank">
+            <BlendingModeIcon className="h-6 w-6 mr-2" />
+            View Color Zen
+          </Link>
         </Button>
 
         <Image
-          src="/color-zen-screenshot.png"
+          src={colorZenScreenshot}
           alt="Color Zen screenshot"
-          width={1550}
-          height={912}
           className="rounded-xl mt-8"
+          priority
+          placeholder="blur"
         />
 
         <H3 className="mt-8">About the Project</H3>
@@ -56,9 +57,9 @@ export default function ColorZenPage() {
         </div>
 
         <Button asChild variant="link" className="mt-4">
-          <a href="https://github.com/jeffdiers/color-zen" target="_blank">
+          <Link href="https://github.com/jeffdiers/color-zen" target="_blank">
             <IconGithub className="w-4 h-4 mr-1" /> View GitHub
-          </a>
+          </Link>
         </Button>
       </ModalScrollBody>
     </ModalPage>
