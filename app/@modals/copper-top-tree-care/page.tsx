@@ -21,14 +21,12 @@ const TECH_STACK: TECH_STACK_NAME[] = [
 export default function CopperTopTreeCarePage() {
   return (
     <ModalPage>
-      <ModalPageTitle>Copper Top Tree Care</ModalPageTitle>
+      <ModalPageTitle
+        title="Copper Top Tree Care"
+        ctaHref="https://www.coppertoptreecare.com/"
+        ctaText="🌳 View Website"
+      />
       <ModalScrollBody>
-        <Button asChild variant="outline" className="text-xl">
-          <a href="https://www.coppertoptreecare.com/" target="_blank">
-            🌳 View Website
-          </a>
-        </Button>
-
         <Image
           src={copperTopTreeCareScreenshot}
           alt="Copper Top Tree Care screenshot"

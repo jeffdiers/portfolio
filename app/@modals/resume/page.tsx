@@ -10,10 +10,10 @@ import Link from "next/link";
 export default function ResumePage() {
   return (
     <ModalPage>
-      <ModalPageTitle>Resume</ModalPageTitle>
+      <ModalPageTitle title="Resume" />
       <ModalScrollBody>
         <Button asChild variant="outline" className="text-xl">
-          <Link href="/Jeff_Diers-Resume-2024.pdf" download>
+          <Link href="/Jeff_Diers-Resume-2026.pdf" download>
             📄 Download PDF
           </Link>
         </Button>

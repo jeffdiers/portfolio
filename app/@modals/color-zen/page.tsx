@@ -23,15 +23,12 @@ const TECH_STACK: TECH_STACK_NAME[] = [
 export default function ColorZenPage() {
   return (
     <ModalPage>
-      <ModalPageTitle>Color Zen</ModalPageTitle>
+      <ModalPageTitle
+        title="Color Zen"
+        ctaHref="https://color-zen-cyan.vercel.app/"
+        ctaText="View Color Zen"
+      />
       <ModalScrollBody>
-        <Button asChild variant="outline" className="text-xl">
-          <Link href="https://color-zen-cyan.vercel.app/" target="_blank">
-            <BlendingModeIcon className="h-6 w-6 mr-2" />
-            View Color Zen
-          </Link>
-        </Button>
-
         <Image
           src={colorZenScreenshot}
           alt="Color Zen screenshot"

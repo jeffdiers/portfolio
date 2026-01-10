@@ -11,6 +11,7 @@ import Image from "next/image";
 import drugWarsScreenshot from "@/public/drug_wars_screenshot.webp";
 import { IconGithub } from "@/components/icons";
 import Link from "next/link";
+import { DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const FEATURES = [
   { emoji: "💊", text: "Buy and sell drugs" },
@@ -41,14 +42,12 @@ const TECH_STACK: TECH_STACK_NAME[] = [
 export default function DrugWarsPage() {
   return (
     <ModalPage>
-      <ModalPageTitle>Drug Wars</ModalPageTitle>
+      <ModalPageTitle
+        title="Drug Wars"
+        ctaHref="https://drug-wars.netlify.app/"
+        ctaText="🕹️ Play Now"
+      />
       <ModalScrollBody>
-        <Button asChild variant="outline" className="text-xl">
-          <Link href="https://drug-wars.netlify.app/" target="_blank">
-            🕹️ Play Now
-          </Link>
-        </Button>
-
         <Image
           src={drugWarsScreenshot}
           alt="Drug Wars game screenshot"

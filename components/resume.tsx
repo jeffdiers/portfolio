@@ -59,10 +59,66 @@ export function Resume() {
         <h2 className="text-2xl font-bold mb-4">EXPERIENCE</h2>
 
         <div className="mb-6">
-          <h3 className="text-xl font-semibold">Jona</h3>
+          <Link
+            href="https://posh.vip"
+            target="_blank"
+            className="text-xl font-semibold  underline-offset-4 underline text-blue-600 hover:text-blue-800"
+          >
+            Posh
+          </Link>
+          <p className="italic">
+            Senior Software Engineer – Product Team – New York, NY (12/2024 –
+            present)
+          </p>
+          <ul className="list-disc pl-4">
+            <li>
+              Senior engineer on a high-scale event and ticketing platform
+              serving millions of users across web and mobile.
+            </li>
+            <li>
+              Lead development of a shared cross-platform design system used
+              across Next.js and React Native (Expo) apps, including tokens,
+              theming, and component libraries
+            </li>
+            <li>
+              Architect and maintain a large TypeScript monorepo (Turborepo,
+              Yarn workspaces) powering design-kit, mobile, web, and shared
+              tooling
+            </li>
+            <li>
+              Build and ship production features across Next.js, React Native,
+              Expo, and tRPC APIs
+            </li>
+            <li>
+              Designed and implemented token-driven theming (light/dark, event
+              branding, OKLCH color models) shared across platforms
+            </li>
+            <li>
+              Own CI/CD and build pipelines for UI packages including Storybook,
+              Chromatic, and package publishing
+            </li>
+            <li>
+              Partner closely with designers and leadership to evolve UX
+              patterns, accessibility, and visual consistency across the product
+            </li>
+            <li>
+              Drive performance and developer-experience improvements through
+              bundling, caching, and build optimization
+            </li>
+          </ul>
+        </div>
+
+        <div className="mb-6">
+          <Link
+            href="https://jona.health/"
+            target="_blank"
+            className="text-xl font-semibold  underline-offset-4 underline text-blue-600 hover:text-blue-800"
+          >
+            Jona
+          </Link>
           <p className="italic">
             Senior Software Engineer – Product Team – New York, NY (10/2023 –
-            present)
+            07/2024)
           </p>
           <ul className="list-disc pl-4">
             <li>
