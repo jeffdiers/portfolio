@@ -16,7 +16,7 @@ const HistoryProvider: React.FC<PropsWithChildren<unknown>> = ({
   children,
 }) => {
   const pathname = usePathname();
-  const previousPathnameRef = useRef<string | undefined>();
+  const previousPathnameRef = useRef<string | undefined>(undefined);
 
   useEffect(() => {
     // Store the previous pathname

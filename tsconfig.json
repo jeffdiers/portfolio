@@ -7,16 +7,14 @@
       "dom.iterable",
       "esnext"
     ] /* Specify a set of bundled library declaration files. */,
-    "jsx": "preserve" /* Specify what JSX code is generated. */,
+    "jsx": "react-jsx" /* Specify what JSX code is generated. */,
     "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. */,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "allowJs": true /* Allow JavaScript files to be a part of your program. */,
-
     /* Module Resolution */
     "moduleResolution": "bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
     "resolveJsonModule": true /* Enable importing .json files. */,
     "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
-
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
     "skipLibCheck": true /* Skip type checking of all declaration files (.d.ts). */,
@@ -27,11 +25,9 @@
     "noUnusedParameters": true /* Report errors for unused function parameters. */,
     "noImplicitReturns": true /* Report errors for codepaths that do not explicitly return in a function. */,
     "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statements. */,
-
     /* Emit Options */
     "noEmit": true /* Disable emitting files from a compilation. */,
     "incremental": true /* Enable incremental compilation by reading/writing information from prior compilations to a file on disk. */,
-
     /* Advanced Options */
     "plugins": [
       {
@@ -39,9 +35,20 @@
       }
     ] /* Load custom plugins. */,
     "paths": {
-      "@/*": ["./*"]
-    } /* Specify path mapping to be computed relative to baseUrl option. */
+      "@/*": [
+        "./*"
+      ]
+    } /* Specify path mapping to be computed relative to baseUrl option. */,
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
