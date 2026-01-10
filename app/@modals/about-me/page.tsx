@@ -11,7 +11,7 @@ import meAndBernie from "@/public/me_and_bernie.webp";
 export default function AboutMePage() {
   return (
     <ModalPage>
-      <ModalPageTitle>About Me</ModalPageTitle>
+      <ModalPageTitle title="About Me" />
       <ModalScrollBody>
         <Image
           src={meAndBernie}
@@ -22,48 +22,49 @@ export default function AboutMePage() {
         />
 
         <H3 className="mt-8">Jeff Diers</H3>
+
         <P>
-          I am an experienced software engineer and application developer
-          passionate about driving digital transformation and creating
-          innovative solutions. With expertise in full-stack development, I
-          leverage a diverse skill set in popular languages, frameworks, and
-          libraries with a focus on expanding my knowledge and skillset.
+          I’m a senior software engineer who loves building clean, scalable
+          product experiences — especially the stuff that makes teams fast:
+          design systems, thoughtful UI architecture, and the tooling that keeps
+          quality high as a product grows. I’m full-stack capable, but I lean
+          front-end when the work is about craft, performance, and consistency.
         </P>
+
         <div className="flex flex-col items-center gap-y-3 mb-2 mt-8">
           <H3>Technologies I Work With</H3>
           <div className="flex flex-wrap gap-2 justify-center">
-            {Object.keys(MY_STACK).map(
-              (
-                badge // MY_STACK is an array of tech badges
-              ) => (
-                <TechBadge
-                  key={badge}
-                  type={badge as keyof typeof MY_STACK}
-                  variant="secondary"
-                />
-              )
-            )}
+            {Object.keys(MY_STACK).map((badge) => (
+              <TechBadge
+                key={badge}
+                type={badge as keyof typeof MY_STACK}
+                variant="secondary"
+              />
+            ))}
           </div>
         </div>
+
         <P>
-          Currently, I am a Senior Software Engineer at Posh, where I contribute
-          to a high-paced startup environment, developing and maintaining a
-          customer-facing web application powered by AI. My work focuses on
-          enhancing user experience and system performance through the
-          development of both frontend UI components and backend APIs.
+          I’m currently a Senior Software Engineer at Posh (since Dec 2024),
+          where I build across web and mobile on a platform that helps people
+          discover events, gather IRL, and manage ticketing at scale. A big part
+          of my work is building and maintaining shared UI foundations —
+          cross-platform component libraries, token-driven theming, and the
+          TypeScript infrastructure that keeps a large monorepo cohesive.
         </P>
+
         <P>
-          My career spans across several companies where I have consistently
-          delivered high-quality code and collaborated with cross-functional
-          teams to create scalable, sustainable, and accessible solutions. I
-          have a strong background in developing AI-powered tools, optimizing
-          web performance, and building comprehensive UI component libraries.
+          I’ve worked across startups and larger orgs, shipping customer-facing
+          features end-to-end and improving developer velocity through better
+          patterns, performance wins, and strong collaboration with design and
+          product. I care a lot about accessibility, polish, and building
+          systems that don’t crumble when the team and codebase get bigger.
         </P>
+
         <P>
-          Beyond my professional work, I enjoy exploring the complexities of
-          software engineering and staying updated with the latest industry
-          trends. When I&apos;m not coding, you can find me spending quality
-          time with my family and my dog, Bernie 🐶.
+          Outside of work, I’m into city planning and walkable urban design,
+          photography, and any excuse to go explore a new neighborhood. When I’m
+          not coding, I’m probably hanging with my dog Bernie 🐶.
         </P>
       </ModalScrollBody>
     </ModalPage>
