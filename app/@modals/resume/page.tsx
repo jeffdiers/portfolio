@@ -6,21 +6,18 @@ import {
   ModalScrollBody,
 } from "@/components/modal-page";
 import { Resume } from "@/components/resume";
-import { Button } from "@/components/ui/button";
 
 export default function ResumePage() {
   return (
     <ModalPage>
-      <ModalPageTitle title="Resume" />
+      <ModalPageTitle
+        title="Resume"
+        ctaHref="/Jeff_Diers-Resume-2026.pdf"
+        ctaText="📄 Download PDF"
+        isDownload
+      />
       <ModalScrollBody>
-        <Button asChild variant="outline" className="text-xl">
-          <Link href="/Jeff_Diers-Resume-2026.pdf" download>
-            📄 Download PDF
-          </Link>
-        </Button>
-        <div className="mt-8 rounded-lg border p-4">
-          <Resume />
-        </div>
+        <Resume />
       </ModalScrollBody>
     </ModalPage>
   );

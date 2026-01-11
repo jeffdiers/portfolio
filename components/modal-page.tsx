@@ -23,19 +23,27 @@ export function ModalPageTitle({
   title,
   ctaHref,
   ctaText,
+  isDownload,
 }: {
   title: string;
   ctaHref?: string | UrlObject;
   ctaText?: string;
+  isDownload?: boolean;
 }) {
   return (
-    <DialogHeader className="mr-12 flex-row items-center justify-between px-6 py-3">
+    <DialogHeader className="flex-row items-center justify-between border-b px-6 py-3 pr-24">
       <DialogTitle>{title}</DialogTitle>
       {ctaHref && ctaText && (
         <Button asChild variant="outline" className="font-sans">
-          <Link href={ctaHref} target="_blank">
-            {ctaText}
-          </Link>
+          {isDownload ? (
+            <Link href={ctaHref} download>
+              {ctaText}
+            </Link>
+          ) : (
+            <Link href={ctaHref} target="_blank">
+              {ctaText}
+            </Link>
+          )}
         </Button>
       )}
     </DialogHeader>
