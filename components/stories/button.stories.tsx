@@ -1,5 +1,6 @@
+import type { Meta, StoryObj } from "@storybook/nextjs";
+
 import { EnvelopeClosedIcon, UpdateIcon } from "@radix-ui/react-icons";
-import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "@/components/ui/button";
 

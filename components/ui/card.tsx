@@ -4,13 +4,13 @@ import Link, { LinkProps } from "next/link";
 
 import { cn } from "@/lib/utils";
 
-type CardLinkProps = LinkProps & {
-  className?: string;
-};
-
 const CardLink = React.forwardRef<
   HTMLAnchorElement,
-  React.PropsWithChildren<CardLinkProps>
+  React.PropsWithChildren<
+    LinkProps & {
+      className?: string;
+    }
+  >
 >(({ className, href, children, ...props }, ref) => (
   <Link
     ref={ref}
@@ -102,8 +102,8 @@ const CardFooter = React.forwardRef<
 CardFooter.displayName = "CardFooter";
 
 export {
-  Card,
   CardLink,
+  Card,
   CardHeader,
   CardFooter,
   CardTitle,
