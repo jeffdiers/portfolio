@@ -71,7 +71,7 @@ export const P = React.forwardRef<
   return (
     <p
       ref={ref}
-      className={`text-foreground text-lg leading-relaxed [&:not(:first-child)]:mt-4 ${className}`}
+      className={`text-foreground text-lg leading-relaxed not-first:mt-4 ${className}`}
       {...props}
     >
       {children}

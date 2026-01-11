@@ -52,7 +52,7 @@ export const Destructive: Story = {
 };
 
 /**
- * Use the `outline` badge for overlaying without obscuring interface details,
+ * Use the `outline-solid` badge for overlaying without obscuring interface details,
  * emphasizing clarity and subtlety..
  */
 export const Outline: Story = {

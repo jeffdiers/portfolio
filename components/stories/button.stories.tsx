@@ -35,7 +35,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 /**
- * Use the `outline` button to reduce emphasis on secondary actions, such as
+ * Use the `outline-solid` button to reduce emphasis on secondary actions, such as
  * canceling or dismissing a dialog.
  */
 export const Outline: Story = {
