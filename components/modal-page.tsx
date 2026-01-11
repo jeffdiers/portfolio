@@ -2,7 +2,7 @@
 
 import { UrlObject } from "url";
 
-import React from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import { PropsWithChildren } from "react";
 
 import Link from "next/link";
@@ -25,16 +25,16 @@ export function ModalPageTitle({
   ctaText,
   isDownload,
 }: {
-  title: string;
+  title: string | ReactElement;
   ctaHref?: string | UrlObject;
   ctaText?: string;
   isDownload?: boolean;
 }) {
   return (
-    <DialogHeader className="flex-row items-center justify-between border-b px-6 py-3 pr-24">
-      <DialogTitle>{title}</DialogTitle>
+    <DialogHeader className="flex-row items-center justify-between border-b px-6 py-3 pr-12">
+      <DialogTitle className="text-3xl">{title}</DialogTitle>
       {ctaHref && ctaText && (
-        <Button asChild variant="outline" className="font-sans">
+        <Button asChild className="font-sans">
           {isDownload ? (
             <Link href={ctaHref} download>
               {ctaText}
@@ -57,7 +57,7 @@ export const ModalScrollBody = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex h-full flex-col items-center overflow-y-auto p-2 pb-12 text-center sm:px-16",
+      "flex h-full flex-col items-center overflow-y-auto p-3 py-8 text-center sm:px-8",
       className,
     )}
     {...props}
@@ -68,15 +68,18 @@ ModalScrollBody.displayName = "ModalScrollBody";
 export function ModalPage({ children }: PropsWithChildren) {
   const router = useRouter();
   const history = useHistory();
+  const path = "/";
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  // Set the dialog to be open by default, only on the client side
+  useEffect(() => {
+    setIsDialogOpen(true);
+  }, []);
 
-  const path = `/`;
-
-  const handleClose = (open: boolean) => {
-    if (open) return; // only handle close
-
+  const handleClose = () => {
+    setIsDialogOpen(false);
     setTimeout(() => {
       if (!history) {
-        router.push(path); // if no history scroll to the segment
+        router.push(path);
       } else {
         router.push(path, { scroll: false });
       }
@@ -84,8 +87,8 @@ export function ModalPage({ children }: PropsWithChildren) {
   };
 
   return (
-    <Dialog defaultOpen onOpenChange={handleClose} modal>
-      <DialogContent className="flex h-full w-screen max-w-3xl flex-col gap-0 border-0 p-0 sm:h-[90vh] sm:w-[90vw] sm:border">
+    <Dialog open={isDialogOpen} onOpenChange={handleClose} modal>
+      <DialogContent className="flex h-full w-screen max-w-3xl flex-col gap-0 rounded-none border-0 p-0 sm:h-[90vh] sm:w-[90vw] sm:rounded-2xl sm:border">
         {children}
       </DialogContent>
     </Dialog>

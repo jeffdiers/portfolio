@@ -25,7 +25,7 @@ export default function CopperTopTreeCarePage() {
       <ModalPageTitle
         title="Copper Top Tree Care"
         ctaHref="https://www.coppertoptreecare.com/"
-        ctaText="🌳 View Website"
+        ctaText="View Website"
       />
       <ModalScrollBody>
         <Image
@@ -33,7 +33,7 @@ export default function CopperTopTreeCarePage() {
           alt="Copper Top Tree Care screenshot"
           width={1550}
           height={912}
-          className="mt-8 rounded-xl"
+          className="rounded-xl"
         />
 
         <p className="mt-8">

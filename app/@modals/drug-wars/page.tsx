@@ -46,13 +46,13 @@ export default function DrugWarsPage() {
       <ModalPageTitle
         title="Drug Wars"
         ctaHref="https://drug-wars.netlify.app/"
-        ctaText="🕹️ Play Now"
+        ctaText="Play Now"
       />
       <ModalScrollBody>
         <Image
           src={drugWarsScreenshot}
           alt="Drug Wars game screenshot"
-          className="mt-8 rounded-xl"
+          className="rounded-xl"
           priority
           placeholder="blur"
         />
@@ -88,7 +88,7 @@ export default function DrugWarsPage() {
           ))}
         </div>
 
-        <Button asChild variant="link" className="mt-4">
+        <Button asChild variant="outline" className="mt-8">
           <Link href="https://github.com/jeffdiers/drugwars" target="_blank">
             <IconGithub className="mr-1 h-4 w-4" /> View GitHub
           </Link>

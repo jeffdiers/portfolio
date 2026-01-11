@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -15,8 +16,8 @@
 
 @theme {
   --font-sans:
-    var(--font-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-caprasimo: var(--font-caprasimo);
 
   --color-border: hsl(var(--border));
@@ -91,7 +92,7 @@
 
 @layer base {
   :root {
-    --background: 45 23% 95%; /* Primary background color */
+    --background: 45 23% 88%; /* Primary background color */
     --foreground: 174 59% 15%; /* Primary text color */
 
     --card: 45 23% 88%; /* Blended background for cards */
@@ -100,7 +101,7 @@
     --popover: 45 23% 85%; /* Slightly darker background for popovers */
     --popover-foreground: 174 59% 15%; /* Dark text color for popovers */
 
-    --primary: 204 68% 50%; /* Primary accent color */
+    --primary: 225.35 84% 49%; /* Primary accent color */
     --primary-foreground: 0 0% 100%; /* Light text color for primary buttons */
 
     --secondary: 174 30% 60%; /* Secondary accent color for contrast */
@@ -141,7 +142,7 @@
     --popover: 174 59% 20%; /* Slightly lighter background for popovers */
     --popover-foreground: 45 23% 90%; /* Light text color for popovers */
 
-    --primary: 204 68% 40%; /* Primary accent color */
+    --primary: 225.35 84% 49%; /* Primary accent color */
     --primary-foreground: 45 23% 90%; /* Light text color for primary buttons */
 
     --secondary: 174 59% 30%; /* Lighter secondary accent color */

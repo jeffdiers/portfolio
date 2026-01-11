@@ -33,7 +33,7 @@ export default function ColorZenPage() {
         <Image
           src={colorZenScreenshot}
           alt="Color Zen screenshot"
-          className="mt-8 rounded-xl"
+          className="rounded-xl"
           priority
           placeholder="blur"
         />
@@ -54,7 +54,7 @@ export default function ColorZenPage() {
           ))}
         </div>
 
-        <Button asChild variant="link" className="mt-4">
+        <Button asChild variant="outline" className="mt-8">
           <Link href="https://github.com/jeffdiers/color-zen" target="_blank">
             <IconGithub className="mr-1 h-4 w-4" /> View GitHub
           </Link>

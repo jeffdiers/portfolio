@@ -24,8 +24,8 @@ const CardLink = React.forwardRef<
       ref={ref}
       href={href}
       className={cn(
-        "group flex h-64 w-64 max-w-full flex-col rounded-xl bg-card/50 text-card-foreground shadow-md sm:rounded-2xl", // default card styles
-        "hover:border-border-hover cursor-pointer text-left transition-all duration-300 hover:ring-2 hover:ring-ring hover:ring-offset-2 hover:ring-offset-background",
+        "group flex h-64 w-64 max-w-full flex-col rounded-xl border bg-card/50 text-card-foreground shadow-md sm:rounded-2xl", // default card styles
+        "cursor-pointer text-left transition-all duration-300 hover:ring-2 hover:ring-ring hover:ring-offset-2 hover:ring-offset-background",
         className,
       )}
       {...props}

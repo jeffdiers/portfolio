@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Resume() {
   return (
-    <div className="container mx-auto flex flex-col text-start">
+    <div className="mx-auto flex flex-col text-start">
       <div className="mb-8 text-start">
         <h1 className="text-4xl font-bold">Jeff Diers – Software Engineer</h1>
         <p>New York, NY</p>
