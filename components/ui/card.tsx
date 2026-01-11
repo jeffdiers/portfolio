@@ -16,8 +16,8 @@ const CardLink = React.forwardRef<
     ref={ref}
     href={href}
     className={cn(
-      "rounded-xl sm:rounded-2xl bg-card/50 text-card-foreground shadow-md group max-w-full flex flex-col w-64 h-64", // default card styles
-      "text-left cursor-pointer hover:ring-2 hover:ring-ring hover:ring-offset-2 hover:ring-offset-background hover:border-border-hover transition-all duration-300",
+      "group flex h-64 w-64 max-w-full flex-col rounded-xl bg-card/50 text-card-foreground shadow-md sm:rounded-2xl", // default card styles
+      "hover:border-border-hover cursor-pointer text-left transition-all duration-300 hover:ring-2 hover:ring-ring hover:ring-offset-2 hover:ring-offset-background",
       className,
     )}
     {...props}
@@ -34,7 +34,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "border sm:rounded-lg bg-card text-card-foreground shadow-2xl",
+      "border bg-card text-card-foreground shadow-2xl sm:rounded-lg",
       className,
     )}
     {...props}
@@ -48,7 +48,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1 p-3 w-full", className)}
+    className={cn("flex w-full flex-col space-y-1 p-3", className)}
     {...props}
   />
 ));
@@ -61,7 +61,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "scroll-m-20 text-2xl tracking-tight leading-tight font-caprasimo",
+      "scroll-m-20 font-caprasimo text-2xl leading-tight tracking-tight",
       className,
     )}
     {...props}

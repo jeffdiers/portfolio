@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function Resume() {
   return (
-    <div className="container mx-auto p-4 flex flex-col text-start">
-      <div className="text-start mb-8">
+    <div className="container mx-auto flex flex-col p-4 text-start">
+      <div className="mb-8 text-start">
         <h1 className="text-4xl font-bold">Jeff Diers – Software Engineer</h1>
         <p>New York, NY</p>
         <p>720-987-3868</p>
@@ -43,7 +43,7 @@ export function Resume() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">SUMMARY</h2>
+        <h2 className="mb-4 text-2xl font-bold">SUMMARY</h2>
         <p>
           Experienced software engineer and application developer passionate
           about driving digital transformation and creating innovative
@@ -55,13 +55,13 @@ export function Resume() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">EXPERIENCE</h2>
+        <h2 className="mb-4 text-2xl font-bold">EXPERIENCE</h2>
 
         <div className="mb-6">
           <Link
             href="https://posh.vip"
             target="_blank"
-            className="text-xl font-semibold  underline-offset-4 underline text-blue-600 hover:text-blue-800"
+            className="text-xl font-semibold text-blue-600 underline underline-offset-4 hover:text-blue-800"
           >
             Posh
           </Link>
@@ -111,7 +111,7 @@ export function Resume() {
           <Link
             href="https://jona.health/"
             target="_blank"
-            className="text-xl font-semibold  underline-offset-4 underline text-blue-600 hover:text-blue-800"
+            className="text-xl font-semibold text-blue-600 underline underline-offset-4 hover:text-blue-800"
           >
             Jona
           </Link>
@@ -243,23 +243,23 @@ export function Resume() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">SKILLS</h2>
+        <h2 className="mb-4 text-2xl font-bold">SKILLS</h2>
         <div className="grid grid-cols-3 gap-4 pl-4">
-          <ul className="list-disc col-span-1">
+          <ul className="col-span-1 list-disc">
             <li>JavaScript ES6</li>
             <li>TypeScript</li>
             <li>Go</li>
             <li>SQL</li>
             <li>MongoDB</li>
           </ul>
-          <ul className="list-disc col-span-1">
+          <ul className="col-span-1 list-disc">
             <li>React.js</li>
             <li>Next.js</li>
             <li>jQuery</li>
             <li>Redis</li>
             <li>Node.js</li>
           </ul>
-          <ul className="list-disc col-span-1">
+          <ul className="col-span-1 list-disc">
             <li>Tailwind CSS</li>
             <li>CSS3</li>
             <li>Linux</li>
@@ -270,9 +270,9 @@ export function Resume() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold mb-4">EDUCATION</h2>
+        <h2 className="mb-4 text-2xl font-bold">EDUCATION</h2>
         <p>Galvanize, Denver, CO (11/2016 – 04/2017)</p>
-        <ul className="list-disc mb-4 pl-4">
+        <ul className="mb-4 list-disc pl-4">
           <li>Intensive web development program.</li>
           <li>
             Trained on front-end and back-end technologies, to build

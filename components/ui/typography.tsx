@@ -7,7 +7,7 @@ export const H1 = React.forwardRef<
   return (
     <h1
       ref={ref}
-      className={`font-caprasimo scroll-m-20 text-3xl md:text-4xl lg:text-5xl ${className}`}
+      className={`scroll-m-20 font-caprasimo text-3xl md:text-4xl lg:text-5xl ${className}`}
       {...props}
     >
       {children}
@@ -39,7 +39,7 @@ export const H3 = React.forwardRef<
   return (
     <h3
       ref={ref}
-      className={`scroll-m-20 text-xl md:text-2xl font-caprasimo ${className}`}
+      className={`scroll-m-20 font-caprasimo text-xl md:text-2xl ${className}`}
       {...props}
     >
       {children}
@@ -55,7 +55,7 @@ export const H4 = React.forwardRef<
   return (
     <h4
       ref={ref}
-      className={`scroll-m-20 text-lg md:text-xl font-caprasimo ${className}`}
+      className={`scroll-m-20 font-caprasimo text-lg md:text-xl ${className}`}
       {...props}
     >
       {children}
@@ -71,7 +71,7 @@ export const P = React.forwardRef<
   return (
     <p
       ref={ref}
-      className={`text-foreground text-lg leading-relaxed not-first:mt-4 ${className}`}
+      className={`text-lg leading-relaxed text-foreground not-first:mt-4 ${className}`}
       {...props}
     >
       {children}

@@ -29,7 +29,7 @@ export function ModalPageTitle({
   ctaText?: string;
 }) {
   return (
-    <DialogHeader className="px-6 py-3 flex-row justify-between items-center mr-12">
+    <DialogHeader className="mr-12 flex-row items-center justify-between px-6 py-3">
       <DialogTitle>{title}</DialogTitle>
       {ctaHref && ctaText && (
         <Button asChild variant="outline" className="font-sans">
@@ -49,7 +49,7 @@ export const ModalScrollBody = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex flex-col items-center text-center h-full overflow-y-auto p-2 sm:px-16 pb-12",
+      "flex h-full flex-col items-center overflow-y-auto p-2 pb-12 text-center sm:px-16",
       className,
     )}
     {...props}
@@ -77,7 +77,7 @@ export function ModalPage({ children }: PropsWithChildren) {
 
   return (
     <Dialog defaultOpen onOpenChange={handleClose} modal>
-      <DialogContent className="flex flex-col p-0 sm:w-[90vw] sm:h-[90vh] h-full w-screen max-w-3xl border-0 sm:border gap-0">
+      <DialogContent className="flex h-full w-screen max-w-3xl flex-col gap-0 border-0 p-0 sm:h-[90vh] sm:w-[90vw] sm:border">
         {children}
       </DialogContent>
     </Dialog>

@@ -33,9 +33,9 @@ export default function AboutMePage() {
           front-end when the work is about craft, performance, and consistency.
         </P>
 
-        <div className="flex flex-col items-center gap-y-3 mb-2 mt-8">
+        <div className="mt-8 mb-2 flex flex-col items-center gap-y-3">
           <H3>Technologies I Work With</H3>
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap justify-center gap-2">
             {Object.keys(MY_STACK).map((badge) => (
               <TechBadge
                 key={badge}

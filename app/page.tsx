@@ -54,13 +54,13 @@ export default function Home() {
     <div className="flex flex-col justify-center">
       <div className="space-y-0 px-4 md:px-12">
         <H1>Hello, my name is Jeff.</H1>
-        <span className="font-caprasimo text-lg lg:text-xl text-destructive">
+        <span className="font-caprasimo text-lg text-destructive lg:text-xl">
           I am a Software Engineer based in NYC.
         </span>
       </div>
 
       {/* Card Links */}
-      <div className="flex overflow-x-auto flex-row space-x-4 pt-1 md:pt-4 h-64 hide-scrollbar pr-4 md:pr-12">
+      <div className="hide-scrollbar flex h-64 flex-row space-x-4 overflow-x-auto pt-1 pr-4 md:pt-4 md:pr-12">
         {cardLinksData.map((card, index) => (
           <HomeCard
             key={index}

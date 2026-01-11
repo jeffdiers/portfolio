@@ -33,7 +33,7 @@ export default function CopperTopTreeCarePage() {
           alt="Copper Top Tree Care screenshot"
           width={1550}
           height={912}
-          className="rounded-xl mt-8"
+          className="mt-8 rounded-xl"
         />
 
         <p className="mt-8">
@@ -43,7 +43,7 @@ export default function CopperTopTreeCarePage() {
         </p>
 
         <H3 className="mt-8">Technologies Used</H3>
-        <div className="flex flex-wrap gap-2 justify-center mt-4">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {TECH_STACK.map((badge) => (
             <TechBadge key={badge} type={badge} variant="secondary" />
           ))}

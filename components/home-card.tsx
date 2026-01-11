@@ -22,18 +22,18 @@ export function HomeCard({
   className,
 }: HomeCardProps) {
   return (
-    <CardLink href={href} className={cn(className, "min-w-64 h-56")}>
+    <CardLink href={href} className={cn(className, "h-56 min-w-64")}>
       <CardHeader className="grow">
-        <div className="flex justify-between items-start">
+        <div className="flex items-start justify-between">
           <span className="font-caprasimo text-3xl">0{number}.</span>
-          <div className="flex flex-col items-end text-right w-[65px] gap-y-2">
-            <IconComponent className="h-5 w-5 " />
+          <div className="flex w-16.25 flex-col items-end gap-y-2 text-right">
+            <IconComponent className="h-5 w-5" />
           </div>
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex flex-col">
         <CardTitle>{title}</CardTitle>
-        <div className="flex flex-wrap gap-1 my-2 w-full">
+        <div className="my-2 flex w-full flex-wrap gap-1">
           {badges.map((badge, index) => (
             <Badge key={index} variant="secondary">
               {badge}

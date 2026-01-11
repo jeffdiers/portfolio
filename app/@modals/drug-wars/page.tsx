@@ -52,7 +52,7 @@ export default function DrugWarsPage() {
         <Image
           src={drugWarsScreenshot}
           alt="Drug Wars game screenshot"
-          className="rounded-xl mt-8"
+          className="mt-8 rounded-xl"
           priority
           placeholder="blur"
         />
@@ -66,7 +66,7 @@ export default function DrugWarsPage() {
           people around the world. This is my take on the classic.
         </P>
 
-        <div className="flex flex-wrap gap-2 justify-center mt-4">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {FEATURES.map((feature, index) => (
             <Feature key={index} emoji={feature.emoji} text={feature.text} />
           ))}
@@ -82,7 +82,7 @@ export default function DrugWarsPage() {
         </P>
 
         <H3 className="mt-8">Technologies Used</H3>
-        <div className="flex flex-wrap gap-2 justify-center mt-4">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {TECH_STACK.map((badge) => (
             <TechBadge key={badge} type={badge} variant="secondary" />
           ))}
@@ -90,7 +90,7 @@ export default function DrugWarsPage() {
 
         <Button asChild variant="link" className="mt-4">
           <Link href="https://github.com/jeffdiers/drugwars" target="_blank">
-            <IconGithub className="w-4 h-4 mr-1" /> View GitHub
+            <IconGithub className="mr-1 h-4 w-4" /> View GitHub
           </Link>
         </Button>
       </ModalScrollBody>

@@ -36,22 +36,22 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
-          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <SunIcon className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          <SunIcon className="h-5 w-5 mr-2" />
+          <SunIcon className="mr-2 h-5 w-5" />
           Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <MoonIcon className="h-5 w-5 mr-2" />
+          <MoonIcon className="mr-2 h-5 w-5" />
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <LaptopIcon className="h-5 w-5 mr-2" />
+          <LaptopIcon className="mr-2 h-5 w-5" />
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -80,9 +80,9 @@ export function Header() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <header className="sticky items-center top-0 z-50 w-full">
-      <div className="container p-4 px-4 md:px-12 flex justify-end items-center w-full">
-        <div className="flex items-center justify-center space-x-3 font-caprasimo italic mr-2">
+    <header className="sticky top-0 z-50 w-full items-center">
+      <div className="container flex w-full items-center justify-end p-4 px-4 md:px-12">
+        <div className="mr-2 flex items-center justify-center space-x-3 font-caprasimo italic">
           <span>Brooklyn, NY</span>
           <GlobeIcon className="h-5 w-5 text-secondary" />
           <span>{brooklynTime}</span>
@@ -97,8 +97,8 @@ export function Header() {
 
 export function Footer() {
   return (
-    <div className="sticky bottom-0 left-0 right-0">
-      <div className="container p-4 px-4 md:px-12 flex flex-col md:flex-row items-center justify-between gap-x-4 font-caprasimo italic text-lg">
+    <div className="sticky right-0 bottom-0 left-0">
+      <div className="container flex flex-col items-center justify-between gap-x-4 p-4 px-4 font-caprasimo text-lg italic md:flex-row md:px-12">
         <div className="flex items-center gap-x-4">
           <span>Thank you for visiting</span>
           <HeartFilledIcon />

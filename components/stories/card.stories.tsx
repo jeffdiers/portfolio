@@ -57,16 +57,16 @@ export const DefaultCardLink: Story = {
   render: () => (
     <CardLink href="jeffdiers.com">
       <CardHeader className="grow">
-        <div className="flex justify-between items-start">
+        <div className="flex items-start justify-between">
           <span className="font-caprasimo text-3xl">01.</span>
-          <div className="flex flex-col items-end text-right w-[65px] gap-y-2">
-            <BellIcon className="h-5 w-5 " />
+          <div className="flex w-16.25 flex-col items-end gap-y-2 text-right">
+            <BellIcon className="h-5 w-5" />
           </div>
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex flex-col">
         <CardTitle>Hello</CardTitle>
-        <div className="flex flex-wrap gap-1 my-2 w-full">
+        <div className="my-2 flex w-full flex-wrap gap-1">
           <Badge variant="secondary">Fun badge</Badge>
         </div>
       </CardContent>

@@ -52,7 +52,7 @@ export default function RootLayout({
           sora.variable,
         )}
       >
-        <main className="relative flex flex-col justify-between bg-background/75 text-foreground min-h-screen">
+        <main className="relative flex min-h-screen flex-col justify-between bg-background/75 text-foreground">
           {/* Background Image */}
           <Image
             src={background} // Replace with the actual image path
