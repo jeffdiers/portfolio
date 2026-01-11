@@ -28,7 +28,7 @@ const componentTemplate = (
   componentName,
   title,
   svgPath,
-  defaultColor
+  defaultColor,
 ) => `import * as React from 'react';
 
 import { IconType } from './types';
@@ -103,7 +103,7 @@ fs.readdirSync(svgDirectory).forEach((filename) => {
     const componentName = convertFilenameToComponentName(filename);
     const svgContent = fs.readFileSync(
       path.join(svgDirectory, filename),
-      "utf8"
+      "utf8",
     );
 
     // Extract the title from the SVG content if exists
@@ -122,7 +122,7 @@ fs.readdirSync(svgDirectory).forEach((filename) => {
       componentName,
       title,
       svgPath,
-      defaultColor
+      defaultColor,
     );
 
     // Write the component content to a file
@@ -133,7 +133,7 @@ fs.readdirSync(svgDirectory).forEach((filename) => {
     fs.appendFileSync(
       indexPath,
       `export { default as ${componentName} } from './${componentName}';\n`,
-      "utf8"
+      "utf8",
     );
   }
 });

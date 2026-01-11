@@ -1,20 +1,23 @@
 "use client";
 
+import { UrlObject } from "url";
+
+import React from "react";
+import { PropsWithChildren } from "react";
+
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+import { useHistory } from "@/lib/history-context";
+import { cn } from "@/lib/utils";
+
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-
-import { useHistory } from "@/lib/history-context";
-import { useRouter } from "next/navigation";
-import React from "react";
-import { PropsWithChildren, useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { UrlObject } from "url";
 
 export function ModalPageTitle({
   title,
@@ -47,7 +50,7 @@ export const ModalScrollBody = React.forwardRef<
     ref={ref}
     className={cn(
       "flex flex-col items-center text-center h-full overflow-y-auto p-2 sm:px-16 pb-12",
-      className
+      className,
     )}
     {...props}
   />
@@ -60,26 +63,20 @@ export function ModalPage({ children }: PropsWithChildren) {
 
   const path = `/`;
 
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const handleClose = (open: boolean) => {
+    if (open) return; // only handle close
 
-  // Set the dialog to be open by default, only on the client side
-  useEffect(() => {
-    setIsDialogOpen(true);
-  }, []);
-
-  const handleClose = () => {
-    setIsDialogOpen(false);
     setTimeout(() => {
       if (!history) {
-        router.push(`${path}`); // if no history scroll to the segment
+        router.push(path); // if no history scroll to the segment
       } else {
         router.push(path, { scroll: false });
       }
-    }, 300); // 500 milliseconds delay for animation
+    }, 300);
   };
 
   return (
-    <Dialog open={isDialogOpen} onOpenChange={handleClose} modal>
+    <Dialog defaultOpen onOpenChange={handleClose} modal>
       <DialogContent className="flex flex-col p-0 sm:w-[90vw] sm:h-[90vh] h-full w-screen max-w-3xl border-0 sm:border gap-0">
         {children}
       </DialogContent>

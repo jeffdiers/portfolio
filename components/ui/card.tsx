@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import Link, { LinkProps } from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -17,7 +18,7 @@ const CardLink = React.forwardRef<
     className={cn(
       "rounded-xl sm:rounded-2xl bg-card/50 text-card-foreground shadow-md group max-w-full flex flex-col w-64 h-64", // default card styles
       "text-left cursor-pointer hover:ring-2 hover:ring-ring hover:ring-offset-2 hover:ring-offset-background hover:border-border-hover transition-all duration-300",
-      className
+      className,
     )}
     {...props}
   >
@@ -34,7 +35,7 @@ const Card = React.forwardRef<
     ref={ref}
     className={cn(
       "border sm:rounded-lg bg-card text-card-foreground shadow-2xl",
-      className
+      className,
     )}
     {...props}
   />
@@ -61,7 +62,7 @@ const CardTitle = React.forwardRef<
     ref={ref}
     className={cn(
       "scroll-m-20 text-2xl tracking-tight leading-tight font-caprasimo",
-      className
+      className,
     )}
     {...props}
   />

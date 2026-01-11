@@ -1,4 +1,3 @@
-import { Badge, type BadgeProps } from "./ui/badge";
 import {
   IconAmazonwebservices,
   IconBun,
@@ -24,6 +23,7 @@ import {
   IconTypescript,
   IconYarn,
 } from "./icons";
+import { Badge, type BadgeProps } from "./ui/badge";
 
 export const MY_STACK = {
   javascript: {

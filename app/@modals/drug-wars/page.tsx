@@ -1,17 +1,18 @@
+import drugWarsScreenshot from "@/public/drug_wars_screenshot.webp";
+
+import Image from "next/image";
+import Link from "next/link";
+
+import { IconGithub } from "@/components/icons";
 import {
   ModalPage,
   ModalPageTitle,
   ModalScrollBody,
 } from "@/components/modal-page";
-import { H3, P } from "@/components/ui/typography";
-import { Badge } from "@/components/ui/badge";
 import { TECH_STACK_NAME, TechBadge } from "@/components/tech-badge";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import drugWarsScreenshot from "@/public/drug_wars_screenshot.webp";
-import { IconGithub } from "@/components/icons";
-import Link from "next/link";
-import { DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { H3, P } from "@/components/ui/typography";
 
 const FEATURES = [
   { emoji: "💊", text: "Buy and sell drugs" },

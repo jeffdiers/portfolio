@@ -1,7 +1,7 @@
+import { EnvelopeClosedIcon, UpdateIcon } from "@radix-ui/react-icons";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "@/components/ui/button";
-import { EnvelopeClosedIcon, UpdateIcon } from "@radix-ui/react-icons";
 
 /**
  * Displays a button or a component that looks like a button.

@@ -1,8 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { IconType } from './types';
+import { IconType } from "./types";
 
-type IconGamepadLineProps = React.ComponentPropsWithoutRef<'svg'> & {
+type IconGamepadLineProps = React.ComponentPropsWithoutRef<"svg"> & {
   /**
    * The title provides an accessible short text description to the SVG
    */
@@ -15,22 +15,28 @@ type IconGamepadLineProps = React.ComponentPropsWithoutRef<'svg'> & {
    * The size of the Icon.
    */
   size?: string | number;
-}
+};
 
-const defaultColor = 'currentColor';
+const defaultColor = "currentColor";
 
-const IconGamepadLine: IconType = React.forwardRef<SVGSVGElement, IconGamepadLineProps>(function IconGamepadLine({ title = 'IconGamepadLine', color = 'currentColor', size = 24, ...others }, ref) {
-  if (color === 'default') {
+const IconGamepadLine: IconType = React.forwardRef<
+  SVGSVGElement,
+  IconGamepadLineProps
+>(function IconGamepadLine(
+  { title = "IconGamepadLine", color = "currentColor", size = 24, ...others },
+  ref,
+) {
+  if (color === "default") {
     color = defaultColor;
   }
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
+      xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
       fill={color}
-      viewBox='0 0 24 24'
+      viewBox="0 0 24 24"
       ref={ref}
       {...others}
     >

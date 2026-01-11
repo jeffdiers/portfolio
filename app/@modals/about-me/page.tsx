@@ -1,12 +1,14 @@
+import meAndBernie from "@/public/me_and_bernie.webp";
+
+import Image from "next/image";
+
 import {
   ModalPage,
   ModalPageTitle,
   ModalScrollBody,
 } from "@/components/modal-page";
-import Image from "next/image";
 import { MY_STACK, TechBadge } from "@/components/tech-badge";
 import { H3, P } from "@/components/ui/typography";
-import meAndBernie from "@/public/me_and_bernie.webp";
 
 export default function AboutMePage() {
   return (

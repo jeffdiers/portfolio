@@ -1,11 +1,31 @@
-import { defineConfig } from "eslint/config";
 import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import nextTypescript from "eslint-config-next/typescript";
+import prettier from "eslint-config-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
+import { defineConfig } from "eslint/config";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+export default defineConfig([
+  // Ignore scripts folder
+  {
+    ignores: ["scripts/**"],
+  },
 
-export default defineConfig([{
-    extends: [...nextCoreWebVitals],
-}]);
+  // Next.js core web vitals
+  ...nextCoreWebVitals,
+
+  // Next.js TypeScript rules
+  ...nextTypescript,
+
+  // Turn off formatting rules that conflict with Prettier
+  prettier,
+
+  // Enable prettier plugin + errors
+  {
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      "prettier/prettier": "error",
+    },
+  },
+]);

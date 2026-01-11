@@ -1,15 +1,16 @@
 "use client";
 
+import copperTopTreeCareScreenshot from "@/public/copper_top_tree_care_screenshot.webp";
+
+import Image from "next/image";
+
 import {
   ModalPage,
   ModalPageTitle,
   ModalScrollBody,
 } from "@/components/modal-page";
 import { TECH_STACK_NAME, TechBadge } from "@/components/tech-badge";
-import { Button } from "@/components/ui/button";
 import { H3 } from "@/components/ui/typography";
-import Image from "next/image";
-import copperTopTreeCareScreenshot from "@/public/copper_top_tree_care_screenshot.webp";
 
 const TECH_STACK: TECH_STACK_NAME[] = [
   "react",

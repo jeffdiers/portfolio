@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   ModalPage,
   ModalPageTitle,
@@ -5,7 +7,6 @@ import {
 } from "@/components/modal-page";
 import { Resume } from "@/components/resume";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function ResumePage() {
   return (

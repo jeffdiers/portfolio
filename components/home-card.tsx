@@ -1,13 +1,13 @@
+import { cn } from "@/lib/utils";
+
+import { IconType } from "./icons/types";
 import { Badge } from "./ui/badge";
 import { CardContent, CardHeader, CardLink, CardTitle } from "./ui/card";
-import { cn } from "@/lib/utils";
-import React from "react";
-import { IconType } from "./icons/types";
 
 export interface HomeCardProps {
   number: string | number;
   href: string;
-  icon: IconType | any;
+  icon: IconType;
   title: string;
   badges: string[];
   className?: string;

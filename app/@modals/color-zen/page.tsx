@@ -1,3 +1,8 @@
+import colorZenScreenshot from "@/public/color_zen_screenshot.webp";
+
+import Image from "next/image";
+import Link from "next/link";
+
 import { IconGithub } from "@/components/icons";
 import {
   ModalPage,
@@ -7,10 +12,6 @@ import {
 import { TECH_STACK_NAME, TechBadge } from "@/components/tech-badge";
 import { Button } from "@/components/ui/button";
 import { H3 } from "@/components/ui/typography";
-import { BlendingModeIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
-import colorZenScreenshot from "@/public/color_zen_screenshot.webp";
-import Link from "next/link";
 
 const TECH_STACK: TECH_STACK_NAME[] = [
   "react",

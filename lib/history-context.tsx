@@ -1,37 +1,36 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import {
   PropsWithChildren,
   createContext,
   useContext,
   useEffect,
   useRef,
+  useState,
 } from "react";
+
+import { usePathname } from "next/navigation";
 
 const HistoryContext = createContext<string | undefined>(undefined);
 export const useHistory = () => useContext(HistoryContext);
 
-const HistoryProvider: React.FC<PropsWithChildren<unknown>> = ({
-  children,
-}) => {
+const HistoryProvider = ({ children }: PropsWithChildren) => {
   const pathname = usePathname();
-  const previousPathnameRef = useRef<string | undefined>(undefined);
+
+  const prevRef = useRef<string | undefined>(undefined);
+  const [previousPathname, setPreviousPathname] = useState<string | undefined>(
+    undefined,
+  );
 
   useEffect(() => {
-    // Store the previous pathname
-    const previousPathname = previousPathnameRef.current;
-    // Update the ref to the current pathname for the next render
-    previousPathnameRef.current = pathname;
-
-    return () => {
-      // Reset the ref to the previous pathname when the component unmounts or before the next effect runs
-      previousPathnameRef.current = previousPathname;
-    };
+    // prevRef.current is the pathname from the previous render
+    setPreviousPathname(prevRef.current);
+    // store current pathname for next time
+    prevRef.current = pathname;
   }, [pathname]);
 
   return (
-    <HistoryContext.Provider value={previousPathnameRef.current}>
+    <HistoryContext.Provider value={previousPathname}>
       {children}
     </HistoryContext.Provider>
   );

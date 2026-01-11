@@ -1,10 +1,12 @@
 "use client";
 
-import * as React from "react";
 import { ThemeProvider } from "next-themes";
-import HistoryProvider from "@/lib/history-context";
 import posthog from "posthog-js";
+
 import { PostHogProvider } from "posthog-js/react";
+import * as React from "react";
+
+import HistoryProvider from "@/lib/history-context";
 
 if (
   typeof window !== "undefined" &&

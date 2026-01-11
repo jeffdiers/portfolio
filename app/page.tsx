@@ -1,6 +1,3 @@
-import { HomeCard, HomeCardProps } from "@/components/home-card";
-import { IconGamepadLine } from "@/components/icons";
-import { H1 } from "@/components/ui/typography";
 import {
   BackpackIcon,
   BlendingModeIcon,
@@ -8,6 +5,10 @@ import {
   FileTextIcon,
   PersonIcon,
 } from "@radix-ui/react-icons";
+
+import { HomeCard, HomeCardProps } from "@/components/home-card";
+import { IconGamepadLine } from "@/components/icons";
+import { H1 } from "@/components/ui/typography";
 
 const cardLinksData: Omit<HomeCardProps, "number">[] = [
   {

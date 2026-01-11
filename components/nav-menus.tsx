@@ -1,30 +1,33 @@
 "use client";
 
-import {
-  GlobeIcon,
-  LinkedInLogoIcon,
-  GitHubLogoIcon,
-  EnvelopeClosedIcon,
-  HeartFilledIcon,
-  SunIcon,
-  MoonIcon,
-  LaptopIcon,
-} from "@radix-ui/react-icons";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "./ui/navigation-menu";
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
+
+import {
+  EnvelopeClosedIcon,
+  GitHubLogoIcon,
+  GlobeIcon,
+  HeartFilledIcon,
+  LaptopIcon,
+  LinkedInLogoIcon,
+  MoonIcon,
+  SunIcon,
+} from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
+
+import { Button } from "@/components/ui/button";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "./ui/navigation-menu";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
