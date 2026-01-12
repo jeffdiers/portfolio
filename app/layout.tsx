@@ -56,16 +56,20 @@ export default function RootLayout({
           {/* Blurry Background (render blur only) */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -z-10"
-            style={{
-              backgroundImage: `url(${background.blurDataURL})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              filter: "blur(24px)",
-              transform: "scale(1.08)", // hides blur edges
-            }}
-          />
-
+            className="absolute inset-0 -z-10 overflow-hidden"
+          >
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute size-full"
+              style={{
+                backgroundImage: `url(${background.blurDataURL})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                filter: "blur(24px)",
+                transform: "scale(1.08)", // hides blur edges
+              }}
+            />
+          </div>
           <Providers>
             <Header />
             {children}
