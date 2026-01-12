@@ -1,11 +1,11 @@
 import meAndBernie from "@/public/me_and_bernie.webp";
 
 import {
-  ModalPage,
   ModalPageHeroImage,
   ModalPageTitle,
   ModalScrollBody,
-} from "@/components/modal-page";
+} from "@/components/modal-components";
+import { ModalPage } from "@/components/modal-page";
 import { MY_STACK, TechBadge } from "@/components/tech-badge";
 import { H3, P } from "@/components/ui/typography";
 

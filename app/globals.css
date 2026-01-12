@@ -116,12 +116,12 @@
     --destructive: 0 79% 54%; /* Red for destructive actions */
     --destructive-foreground: 0 0% 100%; /* Light text on destructive backgrounds */
 
-    --border: 174 20% 50%; /* Borders with a subtle hint of the primary color */
+    --border: 172.93 27% 80%; /* Borders with a subtle hint of the primary color */
 
     --input: 174 59% 15%; /* Light background for inputs */
     --input-foreground: 45 23% 90%; /* Dark text color for inputs */
 
-    --ring: 191 71% 71%; /* Ring color for focus states */
+    --ring: 174 30% 60%; /* Ring color for focus states */
 
     --radius: 0.5rem; /* Border radius for elements */
 

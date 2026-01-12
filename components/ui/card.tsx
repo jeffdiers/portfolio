@@ -1,39 +1,42 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import * as React from "react";
 
 import Link, { LinkProps } from "next/link";
 
 import { cn } from "@/lib/utils";
 
-const CardLink = React.forwardRef<
-  HTMLAnchorElement,
-  React.PropsWithChildren<
-    LinkProps & {
-      className?: string;
-    }
-  >
->(({ className, href, children, ...props }, ref) => (
-  <motion.div
-    whileTap={{ scale: 0.98 }}
-    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-  >
-    <Link
-      ref={ref}
-      href={href}
-      className={cn(
-        "group flex h-64 w-64 max-w-full flex-col rounded-xl border bg-card/50 text-card-foreground shadow-md sm:rounded-2xl", // default card styles
-        "cursor-pointer text-left transition-all duration-300 hover:ring-2 hover:ring-ring hover:ring-offset-2 hover:ring-offset-background",
-        className,
-      )}
-      {...props}
-    >
-      {children}
-    </Link>
-  </motion.div>
-));
+type CardLinkProps = React.PropsWithChildren<
+  LinkProps & {
+    className?: string;
+  }
+>;
+
+const CardLink = React.forwardRef<HTMLAnchorElement, CardLinkProps>(
+  ({ className, href, children, ...props }, ref) => {
+    return (
+      <Link
+        ref={ref}
+        href={href}
+        className={cn(
+          "group flex h-64 w-64 max-w-full flex-col rounded-xl border bg-card/75 text-card-foreground shadow-md sm:rounded-2xl",
+          "cursor-pointer text-left",
+
+          // Glow + ring
+          "transition-all duration-300 hover:ring-2 hover:ring-ring hover:ring-offset-2 hover:ring-offset-transparent",
+          "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:outline-hidden",
+
+          // Springy motion
+          "active:translate-y-0 active:scale-[0.98]",
+
+          className,
+        )}
+        {...props}
+      >
+        {children}
+      </Link>
+    );
+  },
+);
+
 CardLink.displayName = "CardLink";
 
 const Card = React.forwardRef<

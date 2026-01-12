@@ -4,11 +4,11 @@ import Link from "next/link";
 
 import { IconGithub } from "@/components/icons";
 import {
-  ModalPage,
   ModalPageHeroImage,
   ModalPageTitle,
   ModalScrollBody,
-} from "@/components/modal-page";
+} from "@/components/modal-components";
+import { ModalPage } from "@/components/modal-page";
 import { TECH_STACK_NAME, TechBadge } from "@/components/tech-badge";
 import { Button } from "@/components/ui/button";
 import { H3 } from "@/components/ui/typography";

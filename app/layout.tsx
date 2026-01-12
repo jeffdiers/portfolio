@@ -2,7 +2,6 @@ import background from "@/public/background.webp";
 import type { Metadata } from "next";
 
 import { Caprasimo, Sora } from "next/font/google";
-import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -52,9 +51,20 @@ export default function RootLayout({
           sora.variable,
         )}
       >
-        <main className="relative flex min-h-screen flex-col justify-between bg-background/75 text-foreground">
-          {/* Background Image */}
-          <Image src={background} alt="Background" fill className="-z-10" />
+        <main className="relative flex min-h-screen flex-col justify-between bg-background/80 text-foreground">
+          {/* Blurry Background (render blur only) */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10"
+            style={{
+              backgroundImage: `url(${background.blurDataURL})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "blur(24px)",
+              transform: "scale(1.08)", // hides blur edges
+            }}
+          />
+
           <Providers>
             <Header />
             {children}

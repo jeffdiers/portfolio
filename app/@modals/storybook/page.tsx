@@ -1,8 +1,5 @@
-import {
-  ModalPage,
-  ModalPageTitle,
-  ModalScrollBody,
-} from "@/components/modal-page";
+import { ModalPageTitle, ModalScrollBody } from "@/components/modal-components";
+import { ModalPage } from "@/components/modal-page";
 
 export default function StorybookPage() {
   return (

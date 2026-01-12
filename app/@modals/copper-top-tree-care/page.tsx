@@ -3,11 +3,11 @@
 import copperTopTreeCareScreenshot from "@/public/copper_top_tree_care_screenshot.webp";
 
 import {
-  ModalPage,
   ModalPageHeroImage,
   ModalPageTitle,
   ModalScrollBody,
-} from "@/components/modal-page";
+} from "@/components/modal-components";
+import { ModalPage } from "@/components/modal-page";
 import { TECH_STACK_NAME, TechBadge } from "@/components/tech-badge";
 import { H3 } from "@/components/ui/typography";
 
