@@ -2,10 +2,9 @@
 
 import copperTopTreeCareScreenshot from "@/public/copper_top_tree_care_screenshot.webp";
 
-import Image from "next/image";
-
 import {
   ModalPage,
+  ModalPageHeroImage,
   ModalPageTitle,
   ModalScrollBody,
 } from "@/components/modal-page";
@@ -28,12 +27,9 @@ export default function CopperTopTreeCarePage() {
         ctaText="View Website"
       />
       <ModalScrollBody>
-        <Image
+        <ModalPageHeroImage
           src={copperTopTreeCareScreenshot}
           alt="Copper Top Tree Care screenshot"
-          width={1550}
-          height={912}
-          className="rounded-xl"
         />
 
         <p className="mt-8">

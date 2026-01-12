@@ -22,7 +22,7 @@ export function HomeCard({
   className,
 }: HomeCardProps) {
   return (
-    <CardLink href={href} className={cn(className, "h-56 min-w-64")}>
+    <CardLink prefetch href={href} className={cn(className, "h-56 min-w-64")}>
       <CardHeader className="grow">
         <div className="flex items-start justify-between">
           <span className="font-caprasimo text-3xl">0{number}.</span>

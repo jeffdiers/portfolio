@@ -1,9 +1,8 @@
 import meAndBernie from "@/public/me_and_bernie.webp";
 
-import Image from "next/image";
-
 import {
   ModalPage,
+  ModalPageHeroImage,
   ModalPageTitle,
   ModalScrollBody,
 } from "@/components/modal-page";
@@ -15,12 +14,10 @@ export default function AboutMePage() {
     <ModalPage>
       <ModalPageTitle title="About Me" />
       <ModalScrollBody>
-        <Image
+        <ModalPageHeroImage
           src={meAndBernie}
           alt="Picture of Jeff Diers and his dog Bernie"
           className="rounded-full"
-          priority
-          placeholder="blur"
         />
 
         <H3 className="mt-8">Jeff Diers</H3>

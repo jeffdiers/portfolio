@@ -5,6 +5,7 @@ import { UrlObject } from "url";
 import React, { ReactElement, useEffect, useState } from "react";
 import { PropsWithChildren } from "react";
 
+import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -50,6 +51,17 @@ export function ModalPageTitle({
   );
 }
 
+export function ModalPageHeroImage({ className, alt, ...props }: ImageProps) {
+  return (
+    <Image
+      {...props}
+      className={cn("rounded-xl", className)}
+      alt={alt}
+      preload
+    />
+  );
+}
+
 export const ModalScrollBody = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -72,6 +84,7 @@ export function ModalPage({ children }: PropsWithChildren) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   // Set the dialog to be open by default, only on the client side
   useEffect(() => {
+    // eslint-disable-next-line
     setIsDialogOpen(true);
   }, []);
 

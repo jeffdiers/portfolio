@@ -1,11 +1,11 @@
 import colorZenScreenshot from "@/public/color_zen_screenshot.webp";
 
-import Image from "next/image";
 import Link from "next/link";
 
 import { IconGithub } from "@/components/icons";
 import {
   ModalPage,
+  ModalPageHeroImage,
   ModalPageTitle,
   ModalScrollBody,
 } from "@/components/modal-page";
@@ -30,12 +30,9 @@ export default function ColorZenPage() {
         ctaText="View Color Zen"
       />
       <ModalScrollBody>
-        <Image
+        <ModalPageHeroImage
           src={colorZenScreenshot}
           alt="Color Zen screenshot"
-          className="rounded-xl"
-          priority
-          placeholder="blur"
         />
 
         <H3 className="mt-8">About the Project</H3>
