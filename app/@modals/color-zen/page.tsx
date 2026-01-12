@@ -1,6 +1,6 @@
-import colorZenScreenshot from "@/public/color_zen_screenshot.webp";
-
 import Link from "next/link";
+
+import colorZenScreenshot from "@/public/color_zen_screenshot.webp";
 
 import { IconGithub } from "@/components/icons";
 import {

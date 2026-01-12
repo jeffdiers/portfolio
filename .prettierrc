@@ -5,6 +5,7 @@
   "importOrder": [
     "react",
     "^next/",
+    "^@/public/(.*)$",
     "^@/providers/(.*)$",
     "^@/lib/(.*)$",
     "^@/components/(.*)$",

@@ -1,6 +1,6 @@
-import drugWarsScreenshot from "@/public/drug_wars_screenshot.webp";
-
 import Link from "next/link";
+
+import drugWarsScreenshot from "@/public/drug_wars_screenshot.webp";
 
 import { IconGithub } from "@/components/icons";
 import {

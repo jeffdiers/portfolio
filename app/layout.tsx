@@ -1,7 +1,8 @@
-import background from "@/public/background.webp";
 import type { Metadata } from "next";
 
 import { Caprasimo, Sora } from "next/font/google";
+
+import background from "@/public/background.webp";
 
 import { cn } from "@/lib/utils";
 
